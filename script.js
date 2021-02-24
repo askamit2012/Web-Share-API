@@ -8,7 +8,7 @@ const shareButton = document.querySelector('button');
         shareButton.addEventListener('click', () => {
             if (navigator.share) {
                 navigator.share({
-                    title,
+                    "Name": "Amit Kumar",
                     url
                 })
                 .then(() => console.log('Thanks for sharing!'))
