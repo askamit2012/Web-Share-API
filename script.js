@@ -4,12 +4,14 @@ const shareButton = document.querySelector('button');
 
         const title = window.document.title;
         const url = window.document.location.href;
+		const para = document.querySelector('.para');
+		const girl = document.querySelector('#girl');
 
         shareButton.addEventListener('click', () => {
             if (navigator.share) {
                 navigator.share({
-                    "Name": "Amit Kumar",
-                    url
+                    para,
+                    girl
                 })
                 .then(() => console.log('Thanks for sharing!'))
                 .catch((e) => console.error(`Error: ${e}`));
