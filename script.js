@@ -7,6 +7,7 @@ const rightArrow = document.getElementById('rightArrow');
 const ques = document.querySelector('.ques');
 const ans = document.querySelector('.ans');
 
+
 const title = window.document.title;
 const url = window.document.location.href;
 // const para = document.querySelector('.para');
