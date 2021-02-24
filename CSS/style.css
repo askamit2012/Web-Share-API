@@ -9,6 +9,60 @@ body {
   margin: 4em auto;
 }
 
+.container #leftArrow {
+  position: fixed;
+  left: 0;
+  top: 50%;
+  cursor: pointer;
+}
+
+.container #rightArrow {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  cursor: pointer;
+}
+
+.container #rightArrow :hover {
+  color: brown;
+  -webkit-animation: leftArrow 1s infinite linear;
+          animation: leftArrow 1s infinite linear;
+}
+
+@-webkit-keyframes leftArrow {
+  0% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+  50% {
+    -webkit-transform: translateX(-5%);
+            transform: translateX(-5%);
+  }
+  100% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+}
+
+@keyframes leftArrow {
+  0% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+  50% {
+    -webkit-transform: translateX(-5%);
+            transform: translateX(-5%);
+  }
+  100% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+}
+
+.container .ques {
+  color: brown;
+}
+
 .container img {
   width: 240px;
   height: 240px;
