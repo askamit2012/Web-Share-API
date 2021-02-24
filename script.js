@@ -11,7 +11,7 @@ const shareButton = document.querySelector('button');
             if (navigator.share) {
                 navigator.share({
                     para,
-                    girl
+                    url
                 })
                 .then(() => console.log('Thanks for sharing!'))
                 .catch((e) => console.error(`Error: ${e}`));
