@@ -86,9 +86,16 @@ function showLocation(position){
 	console.log(position)
 }
 
+function startVibrate(duration) {
+    navigator.vibrate(duration);
+	console.log('Vibrating')
+}
+
+
 getFirstJoke();
 // getFirstQuote();
 getLocation();
+startVibrate(500);
 // const geo = navigator.geolocation.getCurrentPosition;
 // console.log(geo);
 
