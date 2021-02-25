@@ -1,5 +1,8 @@
 body {
   margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   font-family: 'Nunito';
   font-size: 24px;
 }
@@ -7,6 +10,36 @@ body {
 .container {
   width: 80%;
   margin: 4em auto;
+}
+
+.container .topnav {
+  height: 10vh;
+  width: 80%;
+  background: -webkit-gradient(linear, left top, left bottom, from(yellow), to(orange));
+  background: linear-gradient(yellow, orange);
+  position: absolute;
+  top: 0;
+}
+
+.container .topnav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .topnav ul li {
+  list-style-type: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.container .topnav ul li :hover {
+  background: chocolate;
 }
 
 .container #leftArrow {
@@ -27,36 +60,6 @@ body {
   color: brown;
   -webkit-animation: leftArrow 1s infinite linear;
           animation: leftArrow 1s infinite linear;
-}
-
-@-webkit-keyframes leftArrow {
-  0% {
-    -webkit-transform: translateX(0%);
-            transform: translateX(0%);
-  }
-  50% {
-    -webkit-transform: translateX(-5%);
-            transform: translateX(-5%);
-  }
-  100% {
-    -webkit-transform: translateX(0%);
-            transform: translateX(0%);
-  }
-}
-
-@keyframes leftArrow {
-  0% {
-    -webkit-transform: translateX(0%);
-            transform: translateX(0%);
-  }
-  50% {
-    -webkit-transform: translateX(-5%);
-            transform: translateX(-5%);
-  }
-  100% {
-    -webkit-transform: translateX(0%);
-            transform: translateX(0%);
-  }
 }
 
 .container .ques {

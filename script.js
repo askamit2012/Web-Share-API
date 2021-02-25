@@ -6,7 +6,8 @@ const leftArrow = document.getElementById('leftArrow');
 const rightArrow = document.getElementById('rightArrow');
 const ques = document.querySelector('.ques');
 const ans = document.querySelector('.ans');
-
+const topnavJokes = document.querySelector('#topnavJokes');
+const topnavQuotes = document.getElementById('topnavQuotes');
 
 const title = window.document.title;
 const url = window.document.location.href;
@@ -67,7 +68,33 @@ const getNewJoke = () => {
 	})
 }
 
+function getFirstQuote() {
+	fetch('https://quotes.rest/qod')
+	.then(Response => Response.json())
+	.then(data => {
+		console.log(data.contents.quotes[0])
+	})
+}
+
+const getLocation = () => {
+	if(navigator.geolocation){
+		navigator.geolocation.getCurrentPosition(showLocation)
+	}
+}
+
+function showLocation(position){
+	console.log(position)
+}
+
 getFirstJoke();
+// getFirstQuote();
+getLocation();
+// const geo = navigator.geolocation.getCurrentPosition;
+// console.log(geo);
+
+
 
 leftArrow.addEventListener('click', getNewJoke);
 rightArrow.addEventListener('click', getNewJoke);
+topnavJokes.addEventListener('click', getNewJoke);
+topnavQuotes.addEventListener('click', getFirstQuote);
